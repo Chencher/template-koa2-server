@@ -1,12 +1,11 @@
 {
-  "name": "{{context.basic.name}}",
+  "name": "<%= context.basic.name %>",
   "version": "0.1.0",
-  {% if context.npm.private == true %}
-   "private": true,
-  {% endif %
-  }
-  "author": "{{context.basic.author}}",
-  "license": "{{ context.npm.license }}",
+  "author": "<%= context.basic.author %>",
+  "license": "<%= context.npm.license %>",
+  <% if(context.npm.private) { %>
+  "private": true,
+  <% } %>
   "scripts": {
     "start": "node bin/www",
     "dev": "export NODE_ENV=development && ./node_modules/.bin/nodemon bin/www",
