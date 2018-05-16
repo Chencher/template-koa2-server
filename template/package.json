@@ -1,0 +1,22 @@
+{
+  "name": "<%= context.basic.name %>",
+  "version": "0.1.0",
+  "description": "",
+    <% if(context.npm.private) { %>
+    "private": true,
+    <%
+  } %>
+  },
+    <% if(context.git.hasRepo) { %>
+    "repository": {
+      "type": "git",
+      "url": "<%= context.git.gitRepo %>"
+    },
+    <%
+  } %>
+  },
+  "author": "<%= context.basic.author %>",
+    <% if(!context.npm.private){ %>
+    "license": "<%= context.npm.license %>",
+    <%
+  } %>
