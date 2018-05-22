@@ -8,9 +8,9 @@ const logger = require('koa-logger');
 const cors = require('@koa/cors');
 
 const router = require('./routes');
-const resWrapper = require('./middleware/res-wrapper');
+const resWrapper = require('./middleware/res_wrapper');
 const errorCatch = require('./middleware/error');
-const extendCtx = require('./middleware/extend-ctx');
+const extendCtx = require('./middleware/extend_ctx');
 
 // error handler
 onerror(app);
